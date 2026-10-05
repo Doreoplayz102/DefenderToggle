@@ -1,0 +1,39 @@
+=== BEFORE ===
+live DisableRealtimeMonitoring = 1
+live DisableBehaviorMonitoring  = 
+live DisableIOAVProtection      = 
+live DisableOnAccessProtection  = 
+POLICY RTP key: absent
+POLICY Spynet key: absent
+Features TamperProtection = 1
+RTP enabled = False Behavior = False Ioav = False OnAccess = False
+
+=== STEP 1: gpupdate /target:computer /force ===
+Updating policy...
+
+
+
+Computer Policy update has completed successfully.
+after gpupdate: live reg = 1 RTP = False
+
+=== STEP 2: Set-MpPreference re-enable ===
+Set-MpPreference FAILED: A parameter cannot be found that matches parameter name 'DisableOnAccessProtection'.
+after Set-MpPreference: live reg = 1 RTP = False Behavior = False Ioav = False OnAccess = False
+
+=== STEP 3: Restart-Service WinDefend ===
+restart FAILED: Service 'Microsoft Defender Antivirus Service (WinDefend)' cannot be stopped due to the following error: Cannot open WinDefend service on computer '.'.
+after restart: live reg = 1 RTP = False Behavior = False Ioav = False OnAccess = False
+
+=== FINAL PREFS ===
+DisableRealtimeMonitoring = True
+DisableBehaviorMonitoring  = False
+DisableIOAVProtection      = False
+MAPSReporting              = 2
+SubmitSamplesConsent       = 1
+
+=== events last 15 min (5013/5007/5001/1116) ===
+  15:01:39 id=5013 Tamper Protection Blocked a change to Microsoft Defender Antivirus.
+  15:03:19 id=5013 Tamper Protection Blocked a change to Microsoft Defender Antivirus.
+  15:05:18 id=5013 Tamper Protection Blocked a change to Microsoft Defender Antivirus.
+  15:05:18 id=5013 Tamper Protection Blocked a change to Microsoft Defender Antivirus.
+  15:05:18 id=5013 Tamper Protection Blocked a change to Microsoft Defender Antivirus.

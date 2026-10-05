@@ -1,0 +1,13 @@
+before: reg=1
+reg.exe add exit: 1
+t+1: reg=1 RTP=False
+t+2: reg=1 RTP=False
+t+3: reg=1 RTP=False
+t+4: reg=1 RTP=False
+t+5: reg=1 RTP=False
+t+6: reg=1 RTP=False
+Set-MpPreference: OK
+final: reg=1 RTP=False
+--- events last 3 min mentioning Realtime ---
+  15:03:19 id=5013 Tamper Protection Blocked a change to Microsoft Defender Antivirus. Value: HKLM\SOFTWARE\Microsoft\Windows Defender\Real-Time Protection\DisableRealtimeMonitoring = (Current)
+  15:01:39 id=5013 Tamper Protection Blocked a change to Microsoft Defender Antivirus. Value: HKLM\SOFTWARE\Microsoft\Windows Defender\Real-Time Protection\DisableRealtimeMonitoring = (Current)

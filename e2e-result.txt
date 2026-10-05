@@ -1,0 +1,102 @@
+
+=== status BEFORE ===
+exit=0
+antivirus engine      : ON
+real-time protection  : ON
+behavior monitoring   : ON
+file/attachment scan  : ON
+on-access scanning    : ON
+cloud protection      : Advanced
+sample submission     : Safe samples
+WinDefend service     : Running
+tamper protection     : ON (reg=1)
+elevation             : administrator
+
+=== DISABLE ===
+exit=1
+=== DISABLE PROTECTION requested ===
+Before: antivirus=ON real-time=ON behavior=ON file-scan=ON cloud=Advanced service=Running tamper=ON(reg=1)
+NOTE: Tamper Protection appears ON - Windows will likely BLOCK these changes. Turn it off in Windows Security > Virus & threat protection > Manage settings > Tamper protection, then click Disable again.
+Skipped setting: DisableScanningForNetworkFiles: not supported on this Windows build
+Snapshot saved to C:\Users\Flaxerr\AppData\Local\DefenderToggle\state.json (11 preferences, 7 policy values).
+DisableRealtimeMonitoring: BLOCKED: powershell failed: failed to launch powershell.exe after 3 attempts: An error occurred trying to start process 'powershell.exe' with working directory 'C:\Users\Flaxerr\Documents\mudors'. Access is denied.
+DisableBehaviorMonitoring: BLOCKED: powershell failed: failed to launch powershell.exe after 3 attempts: An error occurred trying to start process 'powershell.exe' with working directory 'C:\Users\Flaxerr\Documents\mudors'. Access is denied.
+DisableIOAVProtection: BLOCKED: powershell failed: failed to launch powershell.exe after 3 attempts: An error occurred trying to start process 'powershell.exe' with working directory 'C:\Users\Flaxerr\Documents\mudors'. Access is denied.
+DisableBlockAtFirstSeen: BLOCKED: powershell failed: failed to launch powershell.exe after 3 attempts: An error occurred trying to start process 'powershell.exe' with working directory 'C:\Users\Flaxerr\Documents\mudors'. Access is denied.
+DisableScriptScanning: BLOCKED: powershell failed: failed to launch powershell.exe after 3 attempts: An error occurred trying to start process 'powershell.exe' with working directory 'C:\Users\Flaxerr\Documents\mudors'. Access is denied.
+DisableArchiveScanning: BLOCKED: powershell failed: failed to launch powershell.exe after 3 attempts: An error occurred trying to start process 'powershell.exe' with working directory 'C:\Users\Flaxerr\Documents\mudors'. Access is denied.
+DisableRemovableDriveScanning: BLOCKED: powershell failed: failed to launch powershell.exe after 3 attempts: An error occurred trying to start process 'powershell.exe' with working directory 'C:\Users\Flaxerr\Documents\mudors'. Access is denied.
+DisableEmailScanning: BLOCKED: powershell failed: failed to launch powershell.exe after 3 attempts: An error occurred trying to start process 'powershell.exe' with working directory 'C:\Users\Flaxerr\Documents\mudors'. Access is denied.
+DisablePrivacyMode: BLOCKED: powershell failed: failed to launch powershell.exe after 3 attempts: An error occurred trying to start process 'powershell.exe' with working directory 'C:\Users\Flaxerr\Documents\mudors'. Access is denied.
+MAPSReporting: BLOCKED: powershell failed: failed to launch powershell.exe after 3 attempts: An error occurred trying to start process 'powershell.exe' with working directory 'C:\Users\Flaxerr\Documents\mudors'. Access is denied.
+SubmitSamplesConsent: BLOCKED: powershell failed: failed to launch powershell.exe after 3 attempts: An error occurred trying to start process 'powershell.exe' with working directory 'C:\Users\Flaxerr\Documents\mudors'. Access is denied.
+StopWinDefend: BLOCKED: powershell failed: failed to launch powershell.exe after 3 attempts: An error occurred trying to start process 'powershell.exe' with working directory 'C:\Users\Flaxerr\Documents\mudors'. Access is denied.
+Policy lock: Real-Time Protection\DisableRealtimeMonitoring = 1
+Policy lock: Real-Time Protection\DisableBehaviorMonitoring = 1
+Policy lock: Real-Time Protection\DisableOnAccessProtection = 1
+Policy lock: Real-Time Protection\DisableIOAVProtection = 1
+Policy lock: Real-Time Protection\DisableScanOnRealtimeEnable = 1
+Policy lock: Spynet\SPYNETReporting = 0
+Policy lock: Spynet\SubmitSamplesConsent = 2
+After: antivirus=ON real-time=ON behavior=ON file-scan=ON cloud=Off service=Running
+WARNING: real-time protection is still ON - changes were likely blocked by Tamper Protection.
+Turn off Tamper Protection (Windows Security > Virus & threat protection > Manage settings), then click DISABLE again.
+=== DISABLE finished ===
+
+=== status DURING ===
+exit=0
+antivirus engine      : ON
+real-time protection  : ON
+behavior monitoring   : ON
+file/attachment scan  : ON
+on-access scanning    : ON
+cloud protection      : Off
+sample submission     : Never send
+WinDefend service     : Running
+tamper protection     : ON (reg=1)
+elevation             : administrator
+
+=== ENABLE ===
+exit=0
+=== RE-ENABLE PROTECTION requested ===
+Restoring exact state snapshotted 2026-10-05 21:47:23 UTC ...
+StartWinDefend: ok
+Policy: removed Real-Time Protection\DisableRealtimeMonitoring
+Policy: removed Real-Time Protection\DisableBehaviorMonitoring
+Policy: removed Real-Time Protection\DisableOnAccessProtection
+Policy: removed Real-Time Protection\DisableIOAVProtection
+Policy: removed Real-Time Protection\DisableScanOnRealtimeEnable
+Policy: removed Spynet\SPYNETReporting
+Policy: removed Spynet\SubmitSamplesConsent
+DisableRealtimeMonitoring: ok
+DisableBehaviorMonitoring: ok
+DisableIOAVProtection: ok
+DisableBlockAtFirstSeen: ok
+DisableScriptScanning: ok
+DisableArchiveScanning: ok
+DisableRemovableDriveScanning: ok
+DisableEmailScanning: ok
+DisablePrivacyMode: ok
+MAPSReporting: ok
+SubmitSamplesConsent: ok
+Snapshot cleared: C:\Users\Flaxerr\AppData\Local\DefenderToggle\state.json
+After: antivirus=ON real-time=ON behavior=ON file-scan=ON cloud=Advanced service=Running
+Protection restored.
+=== RE-ENABLE finished ===
+
+=== status AFTER ===
+exit=0
+antivirus engine      : ON
+real-time protection  : ON
+behavior monitoring   : ON
+file/attachment scan  : ON
+on-access scanning    : ON
+cloud protection      : Advanced
+sample submission     : Safe samples
+WinDefend service     : Running
+tamper protection     : ON (reg=1)
+elevation             : administrator
+
+=== snapshot still present (should be False) ===
+False
+DONE

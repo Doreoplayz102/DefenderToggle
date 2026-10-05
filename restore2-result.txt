@@ -1,0 +1,26 @@
+before: live reg=1 RTP=False Behavior=False Ioav=False OnAccess=False
+--- Set-MpPreference -DisableRealtimeMonitoring $false ---
+Set-MpPreference: OK returned
+t+1: live reg=1 RTP=False Behavior=False Ioav=False OnAccess=False
+t+2: live reg=1 RTP=False Behavior=False Ioav=False OnAccess=False
+t+3: live reg=1 RTP=False Behavior=False Ioav=False OnAccess=False
+t+4: live reg=1 RTP=False Behavior=False Ioav=False OnAccess=False
+t+5: live reg=1 RTP=False Behavior=False Ioav=False OnAccess=False
+t+6: live reg=1 RTP=False Behavior=False Ioav=False OnAccess=False
+t+7: live reg=1 RTP=False Behavior=False Ioav=False OnAccess=False
+t+8: live reg=1 RTP=False Behavior=False Ioav=False OnAccess=False
+--- full messages of events in last 6 min ---
+### 15:03:19 id=5013
+Tamper Protection Blocked a change to Microsoft Defender Antivirus. Value: HKLM\SOFTWARE\Microsoft\Windows Defender\Real-Time Protection\DisableRealtimeMonitoring = (Current)
+### 15:05:18 id=5013
+Tamper Protection Blocked a change to Microsoft Defender Antivirus. Value: HKLM\SOFTWARE\Microsoft\Windows Defender\Real-Time Protection\DisableRealtimeMonitoring = (Current)
+### 15:05:18 id=5013
+Tamper Protection Blocked a change to Microsoft Defender Antivirus. Value: HKLM\SOFTWARE\Microsoft\Windows Defender\Real-Time Protection\DisableBehaviorMonitoring = (Current)
+### 15:05:18 id=5013
+Tamper Protection Blocked a change to Microsoft Defender Antivirus. Value: HKLM\SOFTWARE\Microsoft\Windows Defender\Real-Time Protection\DisableIOAVProtection = (Current)
+### 15:07:27 id=5013
+Tamper Protection Blocked a change to Microsoft Defender Antivirus. Value: HKLM\SOFTWARE\Microsoft\Windows Defender\Real-Time Protection\DisableRealtimeMonitoring = (Current)
+
+--- TamperProtection related feature values ---
+TamperProtection = 1
+TamperProtectionSource = 5

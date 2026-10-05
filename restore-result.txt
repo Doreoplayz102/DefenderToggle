@@ -1,0 +1,19 @@
+--- verification ---
+RealTimeProtectionEnabled = 
+False
+BehaviorMonitorEnabled    = 
+False
+IoavProtectionEnabled     = 
+False
+OnAccessProtectionEnabled = 
+False
+AntivirusEnabled          = 
+True
+AMServiceEnabled          = 
+True
+DisableRealtimeMonitoring = 
+True
+MAPSReporting             = 
+2
+SubmitSamplesConsent      = 
+1
